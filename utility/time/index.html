@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reiyayakko/utility-time</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <h1>reiyayakko/utility-time</h1>
+    <div>
+        <h2>現在時刻</h2>
+        <div id="date">{{ date }}</div>
+        <canvas id="clock_12"></canvas>
+        <canvas id="clock_24"></canvas>
+    </div>
+    <div id="timers"></div>
+    <script type="text/x-template" id="timer-component">
+    <div>
+        <input type="number" :value="hour" v-model="hour">
+        <input type="number" :value="minutes" v-model="minutes">
+        <input type="number" :value="second" v-model="second">
+        <p id="time">{{ `${hour}時間${minutes}分${second}秒` }}</p>
+        <button v-if="">カウントアップ</button>
+        <button v-if="">カウントダウン</button>
+        <button>リセット</button>
+    </div>
+    </script>
+    <script src="./index.js"></script>
+</body>
+</html>
